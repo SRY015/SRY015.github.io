@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sandip Kumar Das | Full Stack Developer</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Sandip Kumar Das, Full Stack Developer specializing in React, TypeScript, Node.js, Firebase and MongoDB."
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+    }
+
+    .mono {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, #a3a3a3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .glow {
+      box-shadow: 0 0 80px rgba(255, 255, 255, 0.05);
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      bottom: 0;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 3px;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.06);
+    }
+
+    .fade-up {
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .float {
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="max-w-6xl mx-auto px-6 py-4">
+      <div
+        class="glass rounded-2xl px-5 py-3 flex items-center justify-between"
+      >
+        <a href="#home" class="font-bold text-lg tracking-tight">
+          Sandip<span class="text-neutral-500">.</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-7 text-sm text-neutral-400">
+          <a href="#about" class="hover:text-white transition">About</a>
+          <a href="#experience" class="hover:text-white transition">
+            Experience
+          </a>
+          <a href="#work" class="hover:text-white transition">
+            Selected Work
+          </a>
+          <a href="#skills" class="hover:text-white transition">
+            Skills
+          </a>
+          <a href="#certifications" class="hover:text-white transition">
+            Certifications
+          </a>
+          <a href="#contact" class="hover:text-white transition">
+            Contact
+          </a>
+        </div>
+
+        <a
+          href="#contact"
+          class="hidden md:inline-flex px-4 py-2 rounded-lg bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition"
+        >
+          Let's Talk
+        </a>
+
+        <!-- Mobile Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-neutral-300 text-xl"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden mt-2 glass rounded-2xl p-4 md:hidden"
+      >
+        <div class="flex flex-col gap-4 text-sm text-neutral-400">
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#experience" class="hover:text-white">Experience</a>
+          <a href="#work" class="hover:text-white">Selected Work</a>
+          <a href="#skills" class="hover:text-white">Skills</a>
+          <a href="#certifications" class="hover:text-white">
+            Certifications
+          </a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+
+  <main id="home">
+
+    <section
+      class="min-h-screen flex items-center pt-32 pb-20 px-6 relative overflow-hidden"
+    >
+      <div
+        class="absolute w-[500px] h-[500px] rounded-full bg-white/[0.025] blur-3xl -top-40 -right-40"
+      ></div>
+
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <!-- Left -->
+          <div class="fade-up">
+
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-neutral-400 mb-7"
+            >
+              <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+              Available for opportunities
+            </div>
+
+            <p class="mono text-sm text-neutral-500 mb-4">
+              Hello, I'm
+            </p>
+
+            <h1
+              class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95]"
+            >
+              Sandip
+              <br />
+              <span class="gradient-text">Kumar Das</span>
+            </h1>
+
+            <h2
+              class="mt-7 text-xl md:text-2xl text-neutral-300 font-medium"
+            >
+              Full Stack Developer
+              <span class="text-neutral-600">·</span>
+              React & Node.js
+            </h2>
+
+            <p
+              class="mt-6 text-neutral-400 leading-7 max-w-xl"
+            >
+              Full Stack Developer with
+              <span class="text-white font-medium">2+ years</span>
+              of professional experience building responsive web applications,
+              APIs, business workflows, and production-ready features.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mt-8">
+
+              <a
+                href="#work"
+                class="px-5 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition"
+              >
+                View My Work
+              </a>
+
+              <a
+                href="#contact"
+                class="px-5 py-3 rounded-xl glass text-sm font-semibold hover:bg-white/[0.07] transition"
+              >
+                Get In Touch
+              </a>
+
+            </div>
+
+            <div
+              class="flex flex-wrap items-center gap-5 mt-9 text-sm text-neutral-500"
+            >
+              <span>React.js</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>Firebase</span>
+              <span>MongoDB</span>
+            </div>
+
+          </div>
+
+          <!-- Code Window -->
+          <div class="float hidden lg:block">
+
+            <div class="glass rounded-2xl overflow-hidden glow">
+
+              <div
+                class="px-5 py-4 border-b border-white/[0.07] flex items-center gap-2"
+              >
+                <span class="w-3 h-3 rounded-full bg-red-400/70"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-400/70"></span>
+                <span class="w-3 h-3 rounded-full bg-green-400/70"></span>
+
+                <span class="mono text-xs text-neutral-600 ml-3">
+                  developer.ts
+                </span>
+              </div>
+
+              <div class="p-6 mono text-sm leading-7 text-neutral-400">
+                <div>
+                  <span class="text-neutral-600">01</span>
+                  <span class="text-purple-300">const</span>
+                  developer
+                  <span class="text-neutral-600">=</span>
+                  <span class="text-yellow-200">{</span>
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">name:</span>
+                  <span class="text-green-300">
+                    "Sandip Kumar Das"
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">role:</span>
+                  <span class="text-green-300">
+                    "Full Stack Developer"
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">experience:</span>
+                  <span class="text-orange-300">
+                    "2+ years"
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">frontend:</span>
+                  <span class="text-green-300">
+                    ["React", "TypeScript"]
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">backend:</span>
+                  <span class="text-green-300">
+                    ["Node.js", "Express"]
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">database:</span>
+                  <span class="text-green-300">
+                    ["Firebase", "MongoDB"]
+                  </span>,
+                </div>
+
+                <div class="pl-6">
+                  <span class="text-blue-300">aiTools:</span>
+                  <span class="text-green-300">
+                    ["Copilot", "Claude"]
+                  </span>
+                </div>
+
+                <div>
+                  <span class="text-yellow-200">}</span>;
+                </div>
+
+                <div class="mt-5 text-neutral-600">
+                  // Building features, not just components.
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="py-24 px-6 border-t border-white/[0.06]">
+
+      <div class="max-w-6xl mx-auto">
+
+        <div class="max-w-3xl">
+
+          <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+            01 / About
+          </p>
+
+          <h2
+            class="mt-4 text-4xl md:text-5xl font-bold tracking-tight"
+          >
+            Building features,
+            <span class="text-neutral-500">
+              not just components.
+            </span>
+          </h2>
+
+          <p class="mt-7 text-neutral-400 leading-8">
+            I am a Full Stack Developer at Pravaah Consulting Inc. with
+            experience working across frontend development, backend APIs,
+            database integration, authentication, and business workflows.
+          </p>
+
+          <p class="mt-5 text-neutral-400 leading-8">
+            My primary focus is building clean and responsive interfaces with
+            React and TypeScript while also working on backend functionality
+            using Node.js, Express.js, Firebase, and MongoDB.
+          </p>
+
+          <p class="mt-5 text-neutral-400 leading-8">
+            I enjoy turning requirements and designs into production-ready
+            features, debugging complex issues, collaborating with teams, and
+            continuously improving my development skills.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section
+      id="experience"
+      class="py-24 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-6xl mx-auto">
+
+        <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+          02 / Professional Journey
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold tracking-tight">
+          Experience
+        </h2>
+
+        <div class="mt-14 relative pl-10">
+
+          <div class="timeline-line"></div>
+
+          <!-- Current Role -->
+
+          <div class="relative pb-14">
+
+            <!-- <div class="timeline-dot"></div> -->
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+
+                <h3 class="text-xl font-semibold">
+                  Full Stack Developer
+                </h3>
+
+                <p class="text-neutral-400 mt-1">
+                  Pravaah Consulting Inc. · Kolkata
+                </p>
+
+              </div>
+
+              <span
+                class="mono text-xs text-neutral-500"
+              >
+                June 2024 — Present
+              </span>
+
+            </div>
+
+            <div class="mt-6 space-y-3 text-neutral-400 leading-7 max-w-3xl">
+
+              <p>
+                • Building and maintaining full-stack web applications across
+                internal and client projects.
+              </p>
+
+              <p>
+                • Developing responsive frontend interfaces using React.js,
+                TypeScript, Tailwind CSS, and reusable UI components.
+              </p>
+
+              <p>
+                • Developing backend APIs and business workflows using
+                Node.js, Express.js, Firebase, and MongoDB.
+              </p>
+
+              <p>
+                • Working with authentication, database integration, cloud
+                services, and role-based access control.
+              </p>
+
+              <p>
+                • Collaborating with team members on feature development,
+                debugging, code reviews, and production releases.
+              </p>
+
+              <p>
+                • Using GitHub Copilot and Claude for AI-assisted development,
+                debugging, and implementation while reviewing and refining
+                generated code.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Pravaah Internship -->
+
+          <div class="relative pb-14">
+
+            <!-- <div class="timeline-dot"></div> -->
+
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-3"
+            >
+
+              <div>
+
+                <h3 class="text-xl font-semibold">
+                  Full Stack Intern
+                </h3>
+
+                <p class="text-neutral-400 mt-1">
+                  Pravaah Consulting Inc.
+                </p>
+
+              </div>
+
+              <span class="mono text-xs text-neutral-500">
+                Dec 2023 — Jun 2024
+              </span>
+
+            </div>
+
+            <div
+              class="mt-6 space-y-3 text-neutral-400 leading-7 max-w-3xl"
+            >
+
+              <p>
+                • Contributed to full-stack web application development using
+                React.js, JavaScript, Node.js, and Firebase.
+              </p>
+
+              <p>
+                • Worked on feature development, debugging, and collaborative
+                development workflows.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- KodNest -->
+
+          <div class="relative">
+
+            <!-- <div class="timeline-dot"></div> -->
+
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-3"
+            >
+
+              <div>
+
+                <h3 class="text-xl font-semibold">
+                  Full Stack Intern
+                </h3>
+
+                <p class="text-neutral-400 mt-1">
+                  KodNest
+                </p>
+
+              </div>
+
+              <span class="mono text-xs text-neutral-500">
+                Jul 2023 — Dec 2023
+              </span>
+
+            </div>
+
+            <div
+              class="mt-6 space-y-3 text-neutral-400 leading-7 max-w-3xl"
+            >
+
+              <p>
+                • Developed web application features and practiced full-stack
+                development through project-based work.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= SELECTED WORK ================= -->
+
+    <section
+      id="work"
+      class="py-24 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-6xl mx-auto">
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+
+          <div>
+
+            <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+              03 / Selected Work
+            </p>
+
+            <h2 class="mt-4 text-4xl font-bold tracking-tight">
+              Projects I've worked on
+            </h2>
+
+          </div>
+
+          <p class="text-neutral-500 text-sm max-w-md">
+            A selection of internal and client projects where I contributed
+            across frontend, backend, database, and business workflows.
+          </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5 mt-12">
+
+          <!-- Travel Supplier -->
+
+          <article
+            class="glass rounded-2xl p-7 card-hover"
+          >
+
+            <div class="flex items-start justify-between gap-5">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                ✈
+              </div>
+
+              <span
+                class="mono text-[10px] text-neutral-500 uppercase tracking-wider"
+              >
+                Client Project
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-semibold">
+              Travel Supplier Management Platform
+            </h3>
+
+            <p class="mt-4 text-neutral-400 text-sm leading-6">
+              A platform for managing travel suppliers, onboarding,
+              documents, vehicles, drivers, activities, itineraries,
+              locations, and cab booking workflows.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-neutral-500">
+
+              <li>
+                • Supplier onboarding and document workflows
+              </li>
+
+              <li>
+                • Vehicle and driver management
+              </li>
+
+              <li>
+                • Activity, itinerary, and location management
+              </li>
+
+              <li>
+                • Cab booking request and status workflows
+              </li>
+
+              <li>
+                • Figma-to-production UI implementation
+              </li>
+
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                React
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                TypeScript
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Node.js
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Express
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                MongoDB
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Tailwind
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                ShadCN
+              </span>
+
+            </div>
+
+          </article>
+
+          <!-- Project Management -->
+
+          <article
+            class="glass rounded-2xl p-7 card-hover"
+          >
+
+            <div class="flex items-start justify-between gap-5">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                ◈
+              </div>
+
+              <span
+                class="mono text-[10px] text-neutral-500 uppercase tracking-wider"
+              >
+                Internal Project
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-semibold">
+              Project Management Platform
+            </h3>
+
+            <p class="mt-4 text-neutral-400 text-sm leading-6">
+              A project management platform designed around projects, tasks,
+              user stories, sprints, Kanban workflows, roles, and team
+              collaboration.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-neutral-500">
+
+              <li>
+                • Project, task, and user story management
+              </li>
+
+              <li>
+                • Sprint and Kanban workflows
+              </li>
+
+              <li>
+                • Role-based access and permissions
+              </li>
+
+              <li>
+                • Reusable responsive UI components
+              </li>
+
+              <li>
+                • Feature development and code reviews
+              </li>
+
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                React
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                TypeScript
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Firebase
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Tailwind
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                ShadCN
+              </span>
+
+            </div>
+
+          </article>
+
+          <!-- Event Ticketing -->
+
+          <article
+            class="glass rounded-2xl p-7 card-hover"
+          >
+
+            <div class="flex items-start justify-between gap-5">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                🎟
+              </div>
+
+              <span
+                class="mono text-[10px] text-neutral-500 uppercase tracking-wider"
+              >
+                Client Project
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-semibold">
+              Event Ticketing Platform
+            </h3>
+
+            <p class="mt-4 text-neutral-400 text-sm leading-6">
+              An event ticketing platform covering event management,
+              ticket management, customer authentication, booking, checkout,
+              and event-related workflows.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-neutral-500">
+
+              <li>
+                • Event and ticket management
+              </li>
+
+              <li>
+                • Customer authentication
+              </li>
+
+              <li>
+                • Ticket booking and checkout workflows
+              </li>
+
+              <li>
+                • Firestore database integration
+              </li>
+
+              <li>
+                • Firebase Cloud Functions
+              </li>
+
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                React
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                TypeScript
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Firebase
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Firestore
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Cloud Functions
+              </span>
+
+            </div>
+
+          </article>
+
+          <!-- EMR PMS -->
+
+          <article
+            class="glass rounded-2xl p-7 card-hover"
+          >
+
+            <div class="flex items-start justify-between gap-5">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                ✚
+              </div>
+
+              <span
+                class="mono text-[10px] text-neutral-500 uppercase tracking-wider"
+              >
+                Internal Project
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 text-xl font-semibold">
+              EMR-PMS
+            </h3>
+
+            <p class="mt-4 text-neutral-400 text-sm leading-6">
+              A healthcare management platform focused on managing patients,
+              doctors, appointments, schedules, and medical records.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-neutral-500">
+
+              <li>
+                • Patient and doctor management
+              </li>
+
+              <li>
+                • Appointment and schedule management
+              </li>
+
+              <li>
+                • Medical record management
+              </li>
+
+              <li>
+                • Real-time data updates
+              </li>
+
+              <li>
+                • Autosave functionality
+              </li>
+
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mt-6">
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                React
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Tailwind
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Firebase
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Firestore
+              </span>
+
+              <span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-xs">
+                Cloud Functions
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section
+      id="skills"
+      class="py-24 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-6xl mx-auto">
+
+        <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+          04 / Skills
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold tracking-tight">
+          Technical Toolkit
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+
+          <!-- Frontend -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="text-2xl mb-5">
+              ◇
+            </div>
+
+            <h3 class="font-semibold text-lg">
+              Frontend
+            </h3>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="skill">React.js</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">Tailwind CSS</span>
+              <span class="skill">Bootstrap</span>
+
+            </div>
+
+          </div>
+
+          <!-- Backend -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="text-2xl mb-5">
+              ◌
+            </div>
+
+            <h3 class="font-semibold text-lg">
+              Backend & APIs
+            </h3>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="skill">Node.js</span>
+              <span class="skill">Express.js</span>
+              <span class="skill">REST APIs</span>
+              <span class="skill">Firebase Functions</span>
+
+            </div>
+
+          </div>
+
+          <!-- Database -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="text-2xl mb-5">
+              ◎
+            </div>
+
+            <h3 class="font-semibold text-lg">
+              Database & Cloud
+            </h3>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="skill">MongoDB</span>
+              <span class="skill">Firestore</span>
+              <span class="skill">Firebase Auth</span>
+              <span class="skill">Cloud Run</span>
+              <span class="skill">Cloud Storage</span>
+
+            </div>
+
+          </div>
+
+          <!-- Tools -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="text-2xl mb-5">
+              ⌘
+            </div>
+
+            <h3 class="font-semibold text-lg">
+              Development Tools
+            </h3>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+
+              <span class="skill">Git</span>
+              <span class="skill">GitHub</span>
+              <span class="skill">GitHub Copilot</span>
+              <span class="skill">Claude</span>
+              <span class="skill">Figma</span>
+              <span class="skill">ShadCN</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATIONS ================= -->
+
+    <section
+      id="certifications"
+      class="py-24 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-6xl mx-auto">
+
+        <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+          05 / Certifications
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold tracking-tight">
+          Certifications
+        </h2>
+
+        <p class="mt-5 text-neutral-400 max-w-2xl">
+          Professional certifications and learning credentials. Replace the
+          placeholder links below with your certificate verification URLs.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+
+          <!-- React -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="flex items-start justify-between">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                R
+              </div>
+
+              <span class="text-xs text-neutral-600">
+                HackerRank
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 font-semibold">
+              Frontend Developer (React)
+            </h3>
+
+            <p class="text-sm text-neutral-500 mt-2">
+              HackerRank
+            </p>
+
+            <!-- Replace # with certificate URL -->
+
+            <a
+              href="https://www.hackerrank.com/certificates/0d730df643e8"
+              target="_blank"
+              class="inline-flex mt-5 text-sm text-neutral-300 hover:text-white transition"
+            >
+              View Certificate →
+            </a>
+
+          </div>
+
+          <!-- JavaScript -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="flex items-start justify-between">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                JS
+              </div>
+
+              <span class="text-xs text-neutral-600">
+                HackerRank
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 font-semibold">
+              JavaScript (Basic)
+            </h3>
+
+            <p class="text-sm text-neutral-500 mt-2">
+              HackerRank
+            </p>
+
+            <a
+              href="https://www.hackerrank.com/certificates/8ebb5c4a076d"
+              target="_blank"
+              class="inline-flex mt-5 text-sm text-neutral-300 hover:text-white transition"
+            >
+              View Certificate →
+            </a>
+
+          </div>
+
+          <!-- Node -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="flex items-start justify-between">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                N
+              </div>
+
+              <span class="text-xs text-neutral-600">
+                HackerRank
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 font-semibold">
+              Node (Basic)
+            </h3>
+
+            <p class="text-sm text-neutral-500 mt-2">
+              HackerRank
+            </p>
+
+            <a
+              href="https://www.hackerrank.com/certificates/dd8759357fda"
+              target="_blank"
+              class="inline-flex mt-5 text-sm text-neutral-300 hover:text-white transition"
+            >
+              View Certificate →
+            </a>
+
+          </div>
+
+          <!-- Java -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="flex items-start justify-between">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                J
+              </div>
+
+              <span class="text-xs text-neutral-600">
+                HackerRank
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 font-semibold">
+              Java (Basic)
+            </h3>
+
+            <p class="text-sm text-neutral-500 mt-2">
+              HackerRank
+            </p>
+
+            <a
+              href="https://www.hackerrank.com/certificates/b5853d93f242"
+              target="_blank"
+              class="inline-flex mt-5 text-sm text-neutral-300 hover:text-white transition"
+            >
+              View Certificate →
+            </a>
+
+          </div>
+
+          <!-- KodNest -->
+
+          <div class="glass rounded-2xl p-6 card-hover">
+
+            <div class="flex items-start justify-between">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-white/[0.06] flex items-center justify-center"
+              >
+                K
+              </div>
+
+              <span class="text-xs text-neutral-600">
+                KodNest
+              </span>
+
+            </div>
+
+            <h3 class="mt-6 font-semibold">
+              Internship Certificate
+            </h3>
+
+            <p class="text-sm text-neutral-500 mt-2">
+              KodNest
+            </p>
+
+            <a
+              href="https://app.kodnest.com/student-certificate/b2946826-bccb-42c3-a02c-2bb57b139ce5"
+              target="_blank"
+              class="inline-flex mt-5 text-sm text-neutral-300 hover:text-white transition"
+            >
+              View Certificate →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section
+      class="py-24 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-6xl mx-auto">
+
+        <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+          06 / Education
+        </p>
+
+        <h2 class="mt-4 text-4xl font-bold tracking-tight">
+          Education
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-5 mt-12">
+
+          <div class="glass rounded-2xl p-7">
+
+            <p class="mono text-xs text-neutral-500">
+              2021 — 2023
+            </p>
+
+            <h3 class="mt-5 text-xl font-semibold">
+              Master of Computer Applications
+            </h3>
+
+            <p class="mt-2 text-neutral-400">
+              T. John College
+            </p>
+
+            <p class="mt-1 text-neutral-500">
+              Bangalore University
+            </p>
+
+            <p class="mt-5 text-sm text-neutral-500">
+              Percentage: 71%
+            </p>
+
+          </div>
+
+          <div class="glass rounded-2xl p-7">
+
+            <p class="mono text-xs text-neutral-500">
+              2018 — 2021
+            </p>
+
+            <h3 class="mt-5 text-xl font-semibold">
+              Bachelor of Computer Applications
+            </h3>
+
+            <p class="mt-2 text-neutral-400">
+              Belda College
+            </p>
+
+            <p class="mt-1 text-neutral-500">
+              Vidyasagar University
+            </p>
+
+            <p class="mt-5 text-sm text-neutral-500">
+              Percentage: 69%
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+      id="contact"
+      class="py-28 px-6 border-t border-white/[0.06]"
+    >
+
+      <div class="max-w-4xl mx-auto text-center">
+
+        <p class="mono text-xs text-neutral-500 uppercase tracking-widest">
+          07 / Contact
+        </p>
+
+        <h2
+          class="mt-5 text-4xl md:text-6xl font-bold tracking-tight"
+        >
+          Let's build something
+          <span class="gradient-text">
+            useful.
+          </span>
+        </h2>
+
+        <p
+          class="mt-6 text-neutral-400 leading-7 max-w-2xl mx-auto"
+        >
+          I'm always open to discussing interesting projects, development
+          opportunities, and ideas where I can contribute as a Full Stack
+          Developer.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mt-9">
+
+          <a
+            href="mailto:sandipkumar9das@gmail.com"
+            class="px-6 py-3 rounded-xl bg-white text-black text-sm font-semibold hover:bg-neutral-200 transition"
+          >
+            Email Me
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/sandip-kumar-das-6b7bb023"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 rounded-xl glass text-sm font-semibold hover:bg-white/[0.07] transition"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/SRY015"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 rounded-xl glass text-sm font-semibold hover:bg-white/[0.07] transition"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="border-t border-white/[0.06] py-8 px-6">
+
+    <div
+      class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"
+    >
+
+      <p class="text-sm text-neutral-600">
+        © 2026 Sandip Kumar Das. All rights reserved.
+      </p>
+
+      <p class="mono text-xs text-neutral-700">
+        React · TypeScript · Node.js · Firebase
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- ================= STYLES FOR SKILL TAGS ================= -->
+
+  <style>
+    .skill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.65rem;
+      border-radius: 0.45rem;
+      background: rgba(255, 255, 255, 0.05);
+      color: #a3a3a3;
+      font-size: 0.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .skill:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+    }
+  </style>
+
+  <!-- ================= MOBILE MENU JS ================= -->
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+
+</body>
+</html>
